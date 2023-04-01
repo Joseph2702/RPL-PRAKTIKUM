@@ -63,10 +63,12 @@ if (isset($_POST['login_btn'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 
-<body class="vh-100 d-flex justify-content-center align-items-center" style="font-family: Lato, Arial, sans-serif;">
+<body class="vh-100 d-flex justify-content-center align-items-center" style="font-family: Inter ,Lato, Arial, sans-serif;">
     <div class="row shadow" style="min-width: 780px;">
         <div class="col-6 p-5 " style="background-color: #fcfcfc;  ">
             <form method="POST" action="Login.php">
@@ -104,9 +106,9 @@ if (isset($_POST['login_btn'])) {
         <div class="col-6  d-flex flex-column justify-content-center" style="background-color: #FD841F;">
             <h3 class="text-center" style="font-weight: bold; color: white; ">Welcome to Login</h3>
             <p class="text-center fs-7" style="color: white; margin-top: 6px; font-size: 15px; ">Dont have Account?</p>
-            <button type="button mx-5" class="btn btn-primary rounded-pill bg-transparent"  style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 70px; 
+            <button type="button mx-5" class="btn btn-primary rounded-pill bg-transparent" style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 70px; 
             margin-left: 152px; border-color: white;">
-               <a href="register.php" style="color: white;"> Sign Up </a> </button>
+                <a href="register.php" style="color: white;"> Sign Up </a> </button>
         </div>
     </div>
 </body>
@@ -114,9 +116,12 @@ if (isset($_POST['login_btn'])) {
 </html>
 
 <style>
-body {
-    background-image: url('bg.png');
-    background-size: 800px;
-}
+    body {
+        background-size: 800px;
+        background: #fff;
+        background-image: url('bg.png');
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('bg.png');
+        }
 
+    
 </style>

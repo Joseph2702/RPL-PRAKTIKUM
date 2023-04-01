@@ -15,9 +15,9 @@
         <div class="col-6  d-flex flex-column justify-content-center" style="background-color: #FD841F; ">
             <h4 class="text-center " style="font-weight: bold; color: white; ">Welcome to Create Account</h4>
             <p class="text-center fs-7" style="color: white; margin-top: 6px; font-size: 15px; ">You have Account ?</p>
-            <button type="button mx-5" class="btn btn-primary rounded-pill bg-transparent"  style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 70px; 
+            <button type="button mx-5" class="btn btn-primary rounded-pill bg-transparent" style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 70px; 
             margin-left: 152px; border-color: white;">
-               <a href="Login.php" style="color: white;"> Sign In </a> </button>
+                <a href="Login.php" style="color: white;"> Sign In </a> </button>
         </div>
         <div class="col-6 p-4" style="background-color: #fcfcfc; ">
             <form action="actionRegis.php" method="POST">
@@ -51,7 +51,7 @@
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div> -->
                 <button type="button mx-5" class="btn btn-primary rounded-pill" style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; 
-                width: 350px;  height: 40px; background-color: #FD841F; border: none; font-size: 14px; color: black;">
+                width: 350px;  height: 40px; background-color: #FD841F; border: none; font-size: 14px; color: black; margin-top: 10px;">
                     Sign In
                 </button>
             </form>
@@ -67,8 +67,11 @@
 
 <style>
     body {
-    background-image: url('bg.png');
-    background-size: 800px;
-}
+        background-size: 800px;
+        background: #fff;
+        background-image: url('bg.png');
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('bg.png');
+    }
 
+    
 </style>
