@@ -50,8 +50,8 @@
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div> -->
-                <button type="button mx-5" class="btn btn-primary " style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; 
-                width: 340px; height: 40px; background-color: #FD841F; border: none; font-size: 14px; color: black;">
+                <button type="button mx-5" class="btn btn-primary rounded-pill" style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; 
+                width: 350px;  height: 40px; background-color: #FD841F; border: none; font-size: 14px; color: black;">
                     Sign In
                 </button>
             </form>
