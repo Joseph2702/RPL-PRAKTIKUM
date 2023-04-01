@@ -1,11 +1,11 @@
 <?php
 session_start();
 include('server/connection.php');
-if(isset($_POST['search'])){
+if (isset($_POST['search'])) {
     $keyword = $_POST['keyword'];
     $q = "SELECT * FROM membership WHERE id_membership LIKE '%$keyword%' or no_ktm
      LIKE '%$keyword%' or no_plat LIKE '%$keyword%' ";
-}else {
+} else {
     $q = 'SELECT * FROM membership';
 }
 $result = mysqli_query($conn, $q);
@@ -34,18 +34,18 @@ $query1 = "SELECT * FROM membership order by id_membership";
 $path = 'asc';
 $newpath = 'asc';
 
-if(isset($_GET['orderby'])){
-    $orderby=$_GET['orderby'];
-    $path=$_GET['path'];
-     
-    $query1="SELECT * FROM  membership order by $orderby $path ";
-    if($path=='asc'){
-      $newpath='desc';
-       
-    }else{
-      $newpath='asc';
+if (isset($_GET['orderby'])) {
+    $orderby = $_GET['orderby'];
+    $path = $_GET['path'];
+
+    $query1 = "SELECT * FROM  membership order by $orderby $path ";
+    if ($path == 'asc') {
+        $newpath = 'desc';
+
+    } else {
+        $newpath = 'asc';
     }
-  }
+}
 ?>
 
 
@@ -63,21 +63,11 @@ if(isset($_GET['orderby'])){
             background: none;
             border: none;
         }
-        h1{
-            /* color: crimson; */
-            font-family: sans-serif;
-            text-align: center;
-            width: 30%;
-            margin:auto;
-            padding: 10px;
-        }
-        body
-        {
-            background-image:
-            linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
-                url('img/doodle3.jpg');
-            background-repeat: repeat;
-            background-size: cover;
+
+        body {
+            background: #fff;
+            background-image: url('img/doodle3.jpg');
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('img/doodle3.jpg');
         }
     </style>
 </head>
@@ -85,13 +75,10 @@ if(isset($_GET['orderby'])){
 <body class="bg-body-tertiary">
     <!-- Nav -->
     <h1></h1>
-    <nav class="navbar sticky-top">
+    <nav class="navbar">
         <div class="container-fluid row g-5 px-5 mx-5 py-5">
             <div class="col col-lg-2">
                 <img src="img/logo.png" alt="" width="70px">
-            </div>
-            <div class="col col-lg-8">
-                <input type="text" class="form-control form-control-sm w-25" id="searchInput" placeholder="Search...">
             </div>
             <div class="col col-lg-2 d-flex justify-content-end">
                 <div class="btn-group">
@@ -102,7 +89,9 @@ if(isset($_GET['orderby'])){
                         <span>Admin</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <h6 class="dropdown-header"><?php echo $_SESSION['nama_admin'] ?></h6>
+                        <h6 class="dropdown-header">
+                            <?= $_SESSION['nama_admin'] ?>
+                        </h6>
                         </li>
                         <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                     </ul>
@@ -126,84 +115,150 @@ if(isset($_GET['orderby'])){
             <div class="tab-content" id="nav-tabContent">
                 <!-- Membership Content -->
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                    <!-- <div class="d-flex justify-content-between align-items-center">
-                        <h2 class="mb-4">Membership</h2>
-                        <button type="button" class="btn btn-primary">Create new membership +</button>
-                    </div> -->
                     <div class="row">
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Jumlah Member :</h5>
-                                    <h6><?php echo $jumlah_member; ?> </h6>
+                        <!-- Progress -->
+                        <div class="col col-12 col-lg-4 mb-2">
+                            <div class="card border-primary">
+                                <div class="card-body d-flex justify-content-between align-items-end">
+                                    <h6 class="card-title m-0">Total Mahasiswa</h6>
+                                    <?= $jumlah_member; ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <h6 class="card-subtitle mb-2 text-body-secondary">Belum Kepake</h6>
+                        <div class="col col-12 col-lg-4 mb-2">
+                            <div class="card border-primary">
+                                <div class="card-body d-flex justify-content-between align-items-end">
+                                    <h6 class="card-title m-0">Total Membership</h6>
+                                    <?= $jumlah_member; ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 mt-45">
+                        <div class="col col-12 col-lg-4 mb-2">
+                            <div class="card border-primary">
+                                <div class="card-body d-flex justify-content-between align-items-end">
+                                    <h6 class="card-title m-0">Total Progress</h6>
+                                    <?= $jumlah_member; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Table -->
+                        <div class="col-12 my-4">
                             <div class="card">
                                 <div class="card-body pb-0">
                                     <div class="row">
-                                        <div class="col-3">
+                                        <div class="col-9">
                                             <select class="form-select form-select-sm"
                                                 aria-label=".form-select-sm example">
-                                                <option selected>Sort</option>
-                                                <option value="1">id</option>
-                                                <option value="2">NO KTM</option>
+                                                <option selected disabled>Sort</option>
+                                                <option value="1">Sort by Student Code A-Z</option>
+                                                <option value="1">Sort by Student Code Z-A</option>
+                                                <option value="2">Sort by Vehicle Type A-Z</option>
+                                                <option value="2">Sort by Vehicle Type Z-A</option>
+                                                <option value="2">Sort by Vehicle Register A-Z</option>
+                                                <option value="2">Sort by Vehicle Register Z-A</option>
+                                                <option value="2">Sort by Due Date A-Z</option>
+                                                <option value="2">Sort by Due Date Z-A</option>
                                             </select>
                                         </div>
-                                        <div class="col-12 mt-4">
-                                            <table class="table table-hover table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">Member ID</th>
-                                                        <th scope="col">Student Code</th>
-                                                        <th scope="col">Vehicle Type</th>
-                                                        <th scope="col">Vehicle Register</th>
-                                                        <th scope="col">Due Date</th>
-                                                        <th scope="col">Email</th>
-                                                        <th scope="col">Address</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <input class="form-check-input m-2" type="checkbox"
-                                                                id="checkboxNoLabel" value="" aria-label="...">
-                                                        </th>
-                                                        <?php while ($row = mysqli_fetch_assoc($result)) {?>
+                                        <div class="col-3">
+                                            <div class="input-group input-group-sm mb-3">
+                                                <input type="text" class="form-control form-control-sm" id="searchInput"
+                                                    placeholder="Search...">
+                                                <button class="btn btn-outline-primary" type="button"
+                                                    id="button-addon2">Search</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="table-responsive my-2">
+                                                <table class="table table-hover table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Student Code</th>
+                                                            <th scope="col">Email</th>
+                                                            <th scope="col">Address</th>
+                                                            <th scope="col">Vehicle Type</th>
+                                                            <th scope="col">Vehicle Register</th>
+                                                            <th scope="col">Member ID</th>
+                                                            <th scope="col">Due Date</th>
+                                                            <th scope="col">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php $i = 0;
+                                                        while ($row = mysqli_fetch_assoc($result)) {
+                                                            $i++; ?>
                                                             <tr>
-                                                                <td><?php echo $row['id_membership'] ?></td>
-                                                                <td><?php echo $row['no_ktm'] ?></td>
-                                                                <td><?php echo $row['jenis_kendaraan'] ?></td>
-                                                                <td><?php echo $row['no_plat'] ?></td>
-                                                                <td><?php echo $row['masa_berlaku'] ?></td>
-                                                                <td><?php echo $row['email'] ?></td>
-                                                                <td><?php echo $row['alamat'] ?></td>
+                                                                <td class="align-middle">
+                                                                    <p class="fw-semibold m-0">
+                                                                        <?= $i ?>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    <p class="fw-light m-0">
+                                                                        <?= $row['no_ktm'] ?>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    <p class="fw-light m-0">
+                                                                        <?= $row['email'] ?>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    <p class="fw-light m-0">
+                                                                        <?= $row['alamat'] ?>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    <p class="fw-light m-0">
+                                                                        <?= $row['jenis_kendaraan'] ?>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    <p class="fw-light m-0">
+                                                                        <?= $row['no_plat'] ?>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    <p class="fw-light m-0">
+                                                                        <?= $row['id_membership'] ?>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    <p class="fw-light m-0">
+                                                                        <?= $row['masa_berlaku'] ?>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    <div class="dropdown">
+                                                                        <a class="btn btn-sm btn-outline-primary dropdown-toggle"
+                                                                            href="#" role="button" data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            Action
+                                                                        </a>
+
+                                                                        <ul class="dropdown-menu">
+                                                                            <li>
+                                                                                <a class="dropdown-item" href="#">Edit</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a class="dropdown-item text-danger"
+                                                                                    href="#">Remove</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
                                                             </tr>
-                                                        <td>
-                                                            <div class="d-flex justify-content-evenly">
-                                                                <button type="button"
-                                                                    class="btn btn-primary btn-sm">Action</button>
-                                                            </div>
-                                                        </td>
                                                         <?php } ?>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex justify-content-center">
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination pagination-sm">
+                                                <li class="page-item"><a class="page-link" href="#">Prev</a></li>
                                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -224,13 +279,21 @@ if(isset($_GET['orderby'])){
                     <h2 class="mb-4">Profile Account</h2>
                     <div class="card">
                         <div class="card-body">
-                            <img style="border-radius: 100%;" src="img/<?php echo $_SESSION['photo_admin'] ?>" alt="">
-                            <h5 class="card-title">Haii!! Mr/Mrs. <?php echo $_SESSION['nama_admin'] ?></h5>
+                            <img style="border-radius: 100%;" src="img/<?= $_SESSION['photo_admin'] ?>" alt="">
+                            <h5 class="card-title">Haii!! Mr/Mrs.
+                                <?= $_SESSION['nama_admin'] ?>
+                            </h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><?php echo $_SESSION['no_telepon'] ?></li>
-                            <li class="list-group-item"><?php echo $_SESSION['email'] ?></li>
-                            <li class="list-group-item"><?php echo $_SESSION['alamat'] ?></li>
+                            <li class="list-group-item">
+                                <?= $_SESSION['no_telepon'] ?>
+                            </li>
+                            <li class="list-group-item">
+                                <?= $_SESSION['email'] ?>
+                            </li>
+                            <li class="list-group-item">
+                                <?= $_SESSION['alamat'] ?>
+                            </li>
                         </ul>
                     </div>
                 </div>
