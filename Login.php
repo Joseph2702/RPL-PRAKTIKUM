@@ -37,7 +37,7 @@ if (isset($_POST['login_btn'])) {
             $_SESSION['no_ktm'] = $no_ktm;
             $_SESSION['jenis_kendaraan'] = $jenis_kendaraan;
             $_SESSION['masa_berlaku'] = $masa_berlaku;
-            $_SESSION['no_plat'] = $no_stnk;
+            $_SESSION['no_plat'] = $no_plat;
             $_SESSION['email'] = $email;
             $_SESSION['alamat'] = $alamat;
             $_SESSION['logged_in'] = true;
