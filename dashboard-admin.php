@@ -1,14 +1,28 @@
 <?php
 session_start();
 include('server/connection.php');
-if (isset($_POST['search'])) {
-    $keyword = $_POST['keyword'];
-    $q = "SELECT * FROM membership WHERE id_membership LIKE '%$keyword%' or no_ktm
-     LIKE '%$keyword%' or no_plat LIKE '%$keyword%' ";
+if (isset($_GET['search'])) {
+    $target = $_GET['search'];
+    $query = "SELECT * FROM `membership`
+    WHERE
+    `id_membership` LIKE '%$target%'
+    OR
+    `jenis_kendaraan` LIKE '%$target%'
+    OR
+    `no_plat` LIKE '%$target%'
+    OR
+    `email` LIKE '%$target%'
+    OR
+    `no_ktm` LIKE '%$target%'";
+} else if (isset($_GET['filterVehicleBy'])) {
+    $target = $_GET['filterVehicleBy'];
+    $query = "SELECT * FROM `membership`
+    WHERE
+    `jenis_kendaraan` LIKE '%$target%'";
 } else {
-    $q = 'SELECT * FROM membership';
+    $query = 'SELECT * FROM membership';
 }
-$result = mysqli_query($conn, $q);
+$dataMembership = mysqli_query($conn, $query);
 
 
 // if (!isset($_SESSION['logged_in'])) {
@@ -73,8 +87,12 @@ if (isset($_GET['orderby'])) {
 </head>
 
 <body class="bg-body-tertiary">
+    <!-- Spinner Anim -->
+    <div class="spinner">
+
+    </div>
+
     <!-- Nav -->
-    <h1></h1>
     <nav class="navbar">
         <div class="container-fluid row g-5 px-5 mx-5 py-5">
             <div class="col col-lg-2">
@@ -146,7 +164,7 @@ if (isset($_GET['orderby'])) {
                             <div class="card">
                                 <div class="card-body pb-0">
                                     <div class="row">
-                                        <div class="col-9">
+                                        <div class="col-3">
                                             <select class="form-select form-select-sm"
                                                 aria-label=".form-select-sm example">
                                                 <option selected disabled>Sort</option>
@@ -161,12 +179,41 @@ if (isset($_GET['orderby'])) {
                                             </select>
                                         </div>
                                         <div class="col-3">
-                                            <div class="input-group input-group-sm mb-3">
-                                                <input type="text" class="form-control form-control-sm" id="searchInput"
-                                                    placeholder="Search...">
-                                                <button class="btn btn-outline-primary" type="button"
-                                                    id="button-addon2">Search</button>
-                                            </div>
+                                            <select class="form-select form-select-sm"
+                                                aria-label=".form-select-sm example">
+                                                <option selected disabled>Sort</option>
+                                                <option value="1">Sort by Student Code A-Z</option>
+                                                <option value="1">Sort by Student Code Z-A</option>
+                                                <option value="2">Sort by Vehicle Type A-Z</option>
+                                                <option value="2">Sort by Vehicle Type Z-A</option>
+                                                <option value="2">Sort by Vehicle Register A-Z</option>
+                                                <option value="2">Sort by Vehicle Register Z-A</option>
+                                                <option value="2">Sort by Due Date A-Z</option>
+                                                <option value="2">Sort by Due Date Z-A</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-3">
+                                            <form action="<?= $_SERVER['PHP_SELF']; ?>" method="get">
+                                                <select name="filterVehicleBy" class="form-select form-select-sm"
+                                                    aria-label=".form-select-sm example"
+                                                    onchange='if(this.value != 0) { this.form.submit(); }'>
+                                                    <option selected disabled>Filter Kendaraan</option>
+                                                    <option value="mobil">Mobil</option>
+                                                    <option value="motor">Motor</option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div class="col-3">
+                                            <form action="<?= $_SERVER['PHP_SELF']; ?>" method="get">
+                                                <div class="input-group input-group-sm mb-3">
+                                                    <input name="search" type="text"
+                                                        class="form-control form-control-sm"
+                                                        placeholder="Cari di semua kriteria...">
+                                                    <button class="btn btn-outline-primary" type="button"
+                                                        id="button-addon2"
+                                                        onclick="document.forms[0].submit()">Cari</button>
+                                                </div>
+                                            </form>
                                         </div>
                                         <div class="col-12">
                                             <div class="table-responsive my-2">
@@ -186,7 +233,7 @@ if (isset($_GET['orderby'])) {
                                                     </thead>
                                                     <tbody>
                                                         <?php $i = 0;
-                                                        while ($row = mysqli_fetch_assoc($result)) {
+                                                        while ($row = mysqli_fetch_assoc($dataMembership)) {
                                                             $i++; ?>
                                                             <tr>
                                                                 <td class="align-middle">
@@ -305,6 +352,7 @@ if (isset($_GET['orderby'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
+    <script src="js/myjs.js"></script>
 </body>
 
 </html>
