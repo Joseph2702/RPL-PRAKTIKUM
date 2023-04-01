@@ -1,6 +1,8 @@
 <?php
+
 $db = 'membership';
-if (isset($_GET['searchData']) || isset($_GET['sortBy']) || isset($_GET['filterVehicleBy'])) {
+
+if (isset($_GET['searchData']) || isset($_GET['sortBy']) || isset($_GET['filterVehicleBy']) || isset($_GET['page'])) {
 
     if (isset($_GET['searchData'])) {
         $searchData = $_GET['searchData'];
@@ -49,11 +51,24 @@ if (isset($_GET['searchData']) || isset($_GET['sortBy']) || isset($_GET['filterV
         $filterVehicleByQuery = "(`id_membership` IS NOT NULL)"; //decoy filter
     }
 
-    $query = "SELECT * FROM $db WHERE" . $searchDataQuery . "AND" . $filterVehicleByQuery . $sortByQuery;
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
+    }
 
+    if (isset($_GET['limitData'])) {
+        $limitData = $_GET['limitData'];
+        $startRow = ($limitData * $page) - $limitData;
+        $endRow = $limitData;
+        $limitDataQuery = " LIMIT $startRow, $endRow";
+    }
+
+    $max = "SELECT * FROM $db WHERE" . $searchDataQuery . "AND" . $filterVehicleByQuery . $sortByQuery;
+    $query = "SELECT * FROM $db WHERE" . $searchDataQuery . "AND" . $filterVehicleByQuery . $sortByQuery . $limitDataQuery;
+    $result = mysqli_query($conn, $query);
+    $maxResult = mysqli_query($conn, $max);
+    $countResult = mysqli_num_rows($result);
+    $countMaxResult = mysqli_num_rows($maxResult);
+    $totalPages = ceil($countMaxResult / $limitData);
 } else {
-    $query = "SELECT * FROM $db";
+    header("Location: " . $_SERVER['PHP_SELF'] . "?searchData=&page=1&limitData=50");
 }
-
-$dataMembership = mysqli_query($conn, $query);
-$countDataMembership = mysqli_num_rows($dataMembership);
