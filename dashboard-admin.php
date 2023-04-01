@@ -82,6 +82,7 @@ $jumlah_member = mysqli_num_rows($member);
         </div>
         <!-- Content -->
         <div class="col col-lg-10">
+            <!-- Tab -->
             <div class="tab-content" id="nav-tabContent">
                 <!-- Membership Content -->
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
@@ -325,7 +326,6 @@ $jumlah_member = mysqli_num_rows($member);
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
