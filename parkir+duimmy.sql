@@ -262,11 +262,6 @@ insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, n
 insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, no_plat, email, alamat	) values (4744, 162021023, 'Motor', '2022-12-16 03:08:54', 'D7088ODS', 'acorcutn@printfriendly.com', '16 Caliangt Crossing');
 insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, no_plat, email, alamat	) values (4756, 162021024, 'Mobil', '2022-11-22 09:49:48', 'D4105ZKF', 'rmyrtleo@flickr.com', '885 Village Lane');
 insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, no_plat, email, alamat	) values (4768, 162021025, 'Motor', '2022-02-27 07:47:21', 'D7343UVY', 'dmcowenp@ezinearticles.com', '77117 Golden Leaf Way');
-insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, no_plat, email, alamat	) values (4780, 162021026, 'Mobil', '2021-12-19 22:38:15', 'D5412GTI', 'jmoncrieffeq@livejournal.com', '82 Namekagon Drive');
-insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, no_plat, email, alamat	) values (4792, 162021027, 'Motor', '2022-08-05 02:19:18', 'D2056OOH', 'rbeaumontr@umich.edu', '0147 Dennis Junction');
-insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, no_plat, email, alamat	) values (4804, 162021028, 'Mobil', '2022-08-09 16:59:00', 'D3545QLK', 'lkohtlers@moonfruit.com', '4213 Helena Alley');
-insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, no_plat, email, alamat	) values (4816, 162021029, 'Motor', '2021-11-04 05:22:09', 'D2005NFW', 'mmiliffet@ovh.net', '31 Sunfield Court');
-insert into membership (id_membership, no_ktm , jenis_kendaraan, masa_berlaku, no_plat, email, alamat	) values (4828, 162021030, 'Motor', '2023-02-24 23:37:01', 'D4011DMR', 'rreinardu@issuu.com', '873 Ohio Circle');
 --
 -- Indexes for dumped tables
 --
