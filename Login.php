@@ -115,6 +115,9 @@ if (isset($_POST['login_btn'])) {
 
 <style>
 
-
+body {
+    background-image: url('bg.png');
+    background-size: 800px;
+}
 
 </style>
