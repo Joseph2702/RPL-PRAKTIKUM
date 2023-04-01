@@ -14,33 +14,33 @@
     <div class="row row shadow" style="min-width: 780px;">
         <div class="col-6  d-flex flex-column justify-content-center" style="background-color: #FD841F; ">
             <h4 class="text-center " style="font-weight: bold; color: white; ">Welcome to Create Account</h4>
-            <p class="text-center fs-7"><a href="Login.php">You have Account ?</a></p>
-            <button type="button mx-5" class="btn btn-primary " style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 60px;">
-                Sign Up
-            </button>
+            <p class="text-center fs-7" style="color: white; margin-top: 6px; font-size: 15px; ">You have Account ?</p>
+            <button type="button mx-5" class="btn btn-primary rounded-pill bg-transparent"  style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 70px; 
+            margin-left: 152px; border-color: white;">
+               <a href="Login.php" style="color: white;"> Sign In </a> </button>
         </div>
         <div class="col-6 p-4" style="background-color: #fcfcfc; ">
             <form action="actionRegis.php" method="POST">
                 <div class="mb-3">
                     <h2 class="mb-4 " style=" margin-bottom: 24px; font-size: 25px;">Create Account</h2>
-                    <label for="exampleInputEmail1" class="form-label ">No KTM</label>
+                    <label for="exampleInputEmail1" class="form-label " style="font-size: 14px ">No KTM</label>
                     <input type="text" class="form-control rounded-pill" name="no_ktm" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label ">No Plat</label>
+                    <label for="exampleInputEmail1" class="form-label " style="font-size: 14px ">No Plat</label>
                     <input type="text" class="form-control rounded-pill" name="no_plat" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                    <label for="exampleInputPassword1" class="form-label" style="font-size: 14px ">Email</label>
                     <input type="email" class="form-control rounded-pill" name="email" id="exampleInputPassword1 ">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label ">Alamat</label>
+                    <label for="exampleInputEmail1" class="form-label " style="font-size: 14px ">Alamat</label>
                     <input type="text" class="form-control rounded-pill" name="alamat" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label ">Jenis Kendaraan</label><br>
-                    <select name="jenis_kendaraan" class="rounded-pill" style="width: 340px; ">
+                    <label for="exampleInputEmail1" class="form-label " style="font-size: 14px ">Jenis Kendaraan</label><br>
+                    <select name="jenis_kendaraan" class="rounded-pill" style="width: 350px; padding: 5px;">
                         <option value="Mobil">Mobil</option>
                         <option value="Motor">Motor</option>
                     </select>
@@ -50,7 +50,8 @@
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div> -->
-                <button type="button mx-5" class="btn btn-primary " style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 255px; ">
+                <button type="button mx-5" class="btn btn-primary " style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; 
+                width: 340px; height: 40px; background-color: #FD841F; border: none; font-size: 14px; color: black;">
                     Sign In
                 </button>
             </form>
