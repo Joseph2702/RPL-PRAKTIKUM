@@ -1,0 +1,157 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans',sans-serif;
+    background-color: #FD841F
+}
+
+.wrapper {
+    width: 1300px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 40px;
+    font-weight: bold;
+    float: left;
+    font-family: courier;
+    color: #001253;
+}
+
+.menu {
+    float:right;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 65px;
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0;
+    z-index: 1;
+    border-bottom:1px solid #001253;
+    background-color: #FD841F;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: #001253 ;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    width: 1200px;
+    margin: auto;
+    margin: auto;
+    display: flex;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.kolom {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    color: #001253;
+}
+
+h2 {
+    font-family: 'comic sans ms';
+    font-weight: 1500;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color:#001253;
+    width: 100%;
+    line-height: 50px;
+}
+
+
+a.tbl-biru {
+    background: #001253;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 120px 10px 120px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-biru:hover {
+    background: #00041a;
+    text-decoration: none;
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+
+@media screen and (max-width: 991.98px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .logo a {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav .menu {
+        width: 100%;
+        margin: 0;
+        
+    }
+
+    nav .menu ul {
+        text-align: center;
+        margin: auto;
+    }
+
+    nav .menu ul li {
+        display: inline-block;
+        float: none;
+    }
+
+    section {
+        display: block;
+    }
+
+    section img {
+        display: block;
+        
+    }
+
+}
