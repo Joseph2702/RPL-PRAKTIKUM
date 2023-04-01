@@ -2,34 +2,58 @@
 $db = 'membership';
 if (isset($_GET['searchData']) || isset($_GET['sortBy']) || isset($_GET['filterVehicleBy'])) {
 
-    $select = "SELECT * FROM `$db`";
-
     if (isset($_GET['searchData'])) {
-        $target = $_GET['searchData'];
+        $searchData = $_GET['searchData'];
+        $searchDataQuery = "
+        (`id_membership` LIKE '%$searchData%'
+        OR
+        `no_plat` LIKE '%$searchData%'
+        OR
+        `email` LIKE '%$searchData%'
+        OR
+        `no_ktm` LIKE '%$searchData%')
+        ";
     }
+
     if (isset($_GET['sortBy'])) {
-        if ($_GET['sortBy'] == "studentAsc") {
-            header("Location: http://www.google.com/");
+        $sortBy = $_GET['sortBy'];
+        if ($sortBy == "studentAsc") {
+            $sortByQuery = "ORDER BY `no_ktm` ASC";
+        } else if ($sortBy == "studentDesc") {
+            $sortByQuery = "ORDER BY `no_ktm` DESC";
+        } else if ($sortBy == "vehicleAsc") {
+            $sortByQuery = "ORDER BY `jenis_kendaraan` ASC";
+        } else if ($sortBy == "vehicleDesc") {
+            $sortByQuery = "ORDER BY `jenis_kendaraan` DESC";
+        } else if ($sortBy == "registerAsc") {
+            $sortByQuery = "ORDER BY `no_plat` ASC";
+        } else if ($sortBy == "registerDesc") {
+            $sortByQuery = "ORDER BY `no_plat` DESC";
+        } else if ($sortBy == "memberAsc") {
+            $sortByQuery = "ORDER BY `id_membership` ASC";
+        } else if ($sortBy == "memberDesc") {
+            $sortByQuery = "ORDER BY `id_membership` DESC";
+        } else if ($sortBy == "dueAsc") {
+            $sortByQuery = "ORDER BY `masa_berlaku` ASC";
+        } else if ($sortBy == "dueDesc") {
+            $sortByQuery = "ORDER BY `masa_berlaku` DESC";
         }
+    } else {
+        $sortByQuery = "ORDER BY `no_ktm` ASC"; //decoy sort
     }
 
     if (isset($_GET['filterVehicleBy'])) {
-        $filter = $_GET['filterVehicleBy'];
-        $filterQuery = "WHERE `jenis_kendaraan` = '$filter'";
+        $filterVehicleBy = $_GET['filterVehicleBy'];
+        $filterVehicleByQuery = "(`jenis_kendaraan` LIKE '%$filterVehicleBy%')";
+    } else {
+        $filterVehicleByQuery = "(`id_membership` IS NOT NULL)"; //decoy filter
     }
 
-$query =
-    // -- AND
-    // -- (`id_membership` LIKE '%$target%'
-    // -- OR
-    // -- `no_plat` LIKE '%$target%'
-    // -- OR
-    // -- `email` LIKE '%$target%'
-    // -- OR
-    // -- `no_ktm` LIKE '%$target%')
-    // -- ";
+    $query = "SELECT * FROM $db WHERE" . $searchDataQuery . "AND" . $filterVehicleByQuery . $sortByQuery;
+
 } else {
-    $query = 'SELECT * FROM `$db`';
+    $query = "SELECT * FROM $db";
 }
 
 $dataMembership = mysqli_query($conn, $query);
+$countDataMembership = mysqli_num_rows($dataMembership);

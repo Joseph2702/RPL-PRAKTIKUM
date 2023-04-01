@@ -19,8 +19,6 @@ include('server/admin-features.php');
 //     }
 // }
 
-$member = mysqli_query($conn, "SELECT * FROM membership");
-$jumlah_member = mysqli_num_rows($member);
 
 ?>
 
@@ -87,30 +85,12 @@ $jumlah_member = mysqli_num_rows($member);
                 <!-- Membership Content -->
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                     <div class="row">
-                        <!-- Progress -->
-                        <div class="col col-12 col-lg-4 mb-2">
-                            <div class="card border-primary">
-                                <div class="card-body d-flex justify-content-between align-items-end">
-                                    <h6 class="card-title m-0">Total Mahasiswa</h6>
-                                    <?= $jumlah_member; ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-12 col-lg-4 mb-2">
-                            <div class="card border-primary">
-                                <div class="card-body d-flex justify-content-between align-items-end">
-                                    <h6 class="card-title m-0">Total Membership</h6>
-                                    <?= $jumlah_member; ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-12 col-lg-4 mb-2">
-                            <div class="card border-primary">
-                                <div class="card-body d-flex justify-content-between align-items-end">
-                                    <h6 class="card-title m-0">Total Progress</h6>
-                                    <?= $jumlah_member; ?>
-                                </div>
-                            </div>
+                        <!-- Info -->
+                        <div class="col col-12 mb-2">
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<strong>Holy guacamole!</strong> You should check in on some of those fields below. <?= $countDataMembership; ?>
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
                         </div>
                         <!-- Table -->
                         <div class="col-12 my-4">
@@ -128,11 +108,10 @@ $jumlah_member = mysqli_num_rows($member);
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-3 my-2">
-                                            <select name="sortBy" class="form-select form-select-sm"
-                                                aria-label=".form-select-sm example">
+                                            <select name="sortBy" class="form-select form-select-sm">
                                                 <option <?php if (!isset($_GET['sortBy'])) {
                                                     echo "selected";
-                                                } ?>   selected disabled>Sort</option>
+                                                } ?>   selected disabled>Urutkan Bedasarkan</option>
                                                 <option <?php if (isset($_GET['sortBy']) && $_GET['sortBy'] == "studentAsc") {
                                                     echo "selected";
                                                 } ?>   value="studentAsc">Sort by Student Code A-Z</option>
