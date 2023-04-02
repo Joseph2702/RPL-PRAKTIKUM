@@ -1,4 +1,6 @@
 /* Admin Styling */
+.our-clickable-row { cursor: pointer!important; }
+
 .our-avatar {
     background: none;
     border: none;
