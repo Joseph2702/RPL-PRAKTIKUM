@@ -1,28 +1,7 @@
 <?php
-session_start();
 include('server/connection.php');
-include('server/dashboardAdminFunctions.php');
-
-
-// if (!isset($_SESSION['logged_in'])) {
-//     header('location: login.php');
-//     exit;
-// }
-
-
-// if (isset($_GET['logout'])) {
-//     if (isset($_SESSION['logged_in'])) {
-//         unset($_SESSION['logged_in']);
-//         unset($_SESSION['nama_admin']);
-//         header('location: login.php');
-//         exit;
-//     }
-// }
-
-
+include('client/dashboard-admin-client.php');
 ?>
-
-
 <!doctype html>
 <html lang="en">
 
@@ -49,17 +28,19 @@ include('server/dashboardAdminFunctions.php');
                 <img src="img/logo.png" alt="Parkeer Logo" width="70px">
             </div>
             <div class="col col-lg-6 d-flex justify-content-end">
+
                 <div class="btn-group">
                     <button type="button" class="dropdown-toggle our-avatar" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <img src="https://sm.ign.com/ign_ap/cover/a/avatar-gen/avatar-generations_hugw.jpg"
                             class="object-fit-cover border rounded-circle" width="31px" alt="Profile Picture">
                         <span>
-                            <?= $_SESSION['nama_admin'] ?>
+                            <?= $result1['nama_admin'] ?>
                         </span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        <li><a class="dropdown-item text-danger" href="<?= $_SERVER['PHP_SELF'] . "?logout=1"; ?>">Log
+                                out</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,7 +67,7 @@ include('server/dashboardAdminFunctions.php');
                         aria-labelledby="list-membership-list">
 
                         <!-- Finder -->
-                        <div class="border sticky-top mb-4 bg-light">
+                        <div class="border-start border-bottom border-end sticky-top mb-4 bg-light">
                             <?php include('components/dashboard-admin-finder.php'); ?>
                         </div>
 
@@ -109,7 +90,7 @@ include('server/dashboardAdminFunctions.php');
                                     </thead>
                                     <tbody>
                                         <?php $i = 0;
-                                        while ($row = mysqli_fetch_assoc($result)) {
+                                        while ($row = mysqli_fetch_assoc($result2)) {
                                             $i++; ?>
                                             <tr>
                                                 <td class="align-middle">
@@ -182,23 +163,22 @@ include('server/dashboardAdminFunctions.php');
                     </div>
                     <!-- Profile Content -->
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h2 class="mb-4">Profile Account</h2>
                         <div class="card">
                             <div class="card-body">
-                                <img style="border-radius: 100%;" src="img/<?= $_SESSION['photo_admin'] ?>" alt="">
+                                <img style="border-radius: 100%;" src="img/" alt="">
                                 <h5 class="card-title">Haii!! Mr/Mrs.
-                                    <?= $_SESSION['nama_admin'] ?>
+                                    <?= $result1['nama_admin'] ?>
                                 </h5>
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <?= $_SESSION['no_telepon'] ?>
+                                    <?= $result1['no_telepon'] ?>
                                 </li>
                                 <li class="list-group-item">
-                                    <?= $_SESSION['email'] ?>
+                                    <?= $result1['email'] ?>
                                 </li>
                                 <li class="list-group-item">
-                                    <?= $_SESSION['alamat'] ?>
+                                    <?= $result1['alamat'] ?>
                                 </li>
                             </ul>
                         </div>

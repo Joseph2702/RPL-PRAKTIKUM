@@ -41,9 +41,11 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id_admin`, `nama_admin`, `no_telepon`, `pin`, `email`, `alamat`, `photo_admin`) VALUES
-(1, 'abdul', 837347329, 123, 'abdul@gmail.com', 'jalan cikaso barat', 'admin_profile1'),
-(2, 'muhafidin', 83458544, 456, 'dimasmuhafidin@gmail.com', 'jalan padalarang', 'admin_profile2');
+insert into admin (id_admin, nama_admin, no_telepon, pin, email, alamat, photo_admin) values ('1234', 'Kamilah', '082367379239', '123456', 'kflorey0@ustream.tv', '2112 Leroy Pass', 'profile_female');
+insert into admin (id_admin, nama_admin, no_telepon, pin, email, alamat, photo_admin) values ('8402', 'Aubert', '083788424374', '127229', 'atowsie1@usda.gov', '03 Melrose Pass', 'profile_male');
+insert into admin (id_admin, nama_admin, no_telepon, pin, email, alamat, photo_admin) values ('2997', 'Brandie', '085542259150', '005940', 'bmcguckin2@bigcartel.com', '4001 Oak Hill', 'profile_female');
+insert into admin (id_admin, nama_admin, no_telepon, pin, email, alamat, photo_admin) values ('8286', 'Guillema', '085122671218', '505796', 'gvanvelden3@utexas.edu', '6 Union Avenue', 'profile_male');
+insert into admin (id_admin, nama_admin, no_telepon, pin, email, alamat, photo_admin) values ('5884', 'Cedric', '086739106797', '460710', 'ctrippack4@wikimedia.org', '507 Schiller Pass', 'profile_male');
 
 -- --------------------------------------------------------
 
