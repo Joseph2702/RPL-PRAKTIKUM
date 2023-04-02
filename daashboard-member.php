@@ -3,13 +3,11 @@
 include('server/connection.php');
 
 
-if (isset($_POST['cari'])) {
-    $keyword = $_POST['keyword'];
-    $q = "SELECT * FROM membership WHERE no_ktm LIKE '%$keyword%'";
-} else {
-    $q = 'SELECT * FROM membership';
+if (isset($_SESSION['logged_in'])){
+    $no_ktm = $_SESSION['no_ktm'];
+    $query = "SELECT * FROM membership WHERE no_ktm = '$no_ktm'";
 }
-$result = mysqli_query($conn, $q);
+$result = mysqli_query($conn, $query);
 
 if (!isset($_SESSION['logged_in'])) {
     header('location: login.php');
@@ -99,18 +97,20 @@ if (isset($_GET['logout'])) {
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">CARD Member</h4>
+                                    <?php while ($row = mysqli_fetch_assoc($result)){?>
                                     <div class="d-flex justify-content-between">
                                         <h6><img src="https://sm.ign.com/ign_ap/cover/a/avatar-gen/avatar-generations_hugw.jpg" class="object-fit-cover border rounded-circle " width="225px" alt="Profile Picture"></h6>
                                         <div class="col-7"> <br>
-                                            <h6>ID MEMBERSHIP : <?php echo $_SESSION['id_membership'] ?></h6>
-                                            <h6>NO KTM : <?php echo $_SESSION['no_ktm'] ?> </h6>
-                                            <h6>NO PLAT : <?php echo $_SESSION['no_plat'] ?></h6>
-                                            <h6>JENIS KENDARAAN : <?php echo $_SESSION['jenis_kendaraan'] ?></h6>
-                                            <h6>EMAIL : <?php echo $_SESSION['email'] ?></h6>
-                                            <h6>ALAMAT : <?php echo $_SESSION['alamat'] ?></h6>
-                                            <h6>MASA BERLAKU : <?php echo $_SESSION['masa_berlaku'] ?></h6>
+                                            <h6>ID MEMBERSHIP : <?php echo $row['id_membership'] ?></h6>
+                                            <h6>NO KTM : <?php echo $row['no_ktm'] ?> </h6>
+                                            <h6>NO PLAT : <?php echo $row['no_plat'] ?></h6>
+                                            <h6>JENIS KENDARAAN : <?php echo $row['jenis_kendaraan'] ?></h6>
+                                            <h6>EMAIL : <?php echo $row['email'] ?></h6>
+                                            <h6>ALAMAT : <?php echo $row['alamat'] ?></h6>
+                                            <h6>MASA BERLAKU : <?php echo $row['masa_berlaku'] ?></h6>
                                         </div>
                                     </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ if (isset($_GET['logout'])) {
                                     <img src="https://sm.ign.com/ign_ap/cover/a/avatar-gen/avatar-generations_hugw.jpg" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                                     <h5 class="my-3">Profile Member</h5>
                                     <h4 class="text-muted mb-1"><?php echo $_SESSION['no_ktm'] ?></h4> <br>
-                                    <button type="button" class="btn btn-danger">Edit Profile</button>
+                                    <a href="edit-member.php?no_ktm=<?php echo $_SESSION['no_ktm']; ?>">Edit</a>
                                 </div>
                             </div>
                         </div>
@@ -183,6 +183,10 @@ if (isset($_GET['logout'])) {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
                     <!-- Footer -->
 
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
