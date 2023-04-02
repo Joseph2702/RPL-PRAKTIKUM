@@ -67,11 +67,11 @@ include('client/dashboard-admin-client.php');
                         aria-labelledby="list-membership-list">
 
                         <!-- Finder -->
-                        <div class="border-start border-bottom border-end sticky-top mb-4 bg-light">
+                        <div class="sticky-top py-4">
                             <?php include('components/dashboard-admin-finder.php'); ?>
                         </div>
 
-                        <div class="card mb-4">
+                        <div class="card">
                             <!-- Table -->
                             <div class="table-responsive my-2">
                                 <table class="table table-hover table-striped">
