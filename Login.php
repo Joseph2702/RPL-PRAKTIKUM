@@ -66,9 +66,20 @@ if (isset($_POST['login_btn'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <style>
+    body {
+        background: #fff;
+        background-image: url('bg.png');
+        background-size: 600px;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('bg.png');
+    }
+</style>
+
 </head>
 
 <body class="vh-100 d-flex justify-content-center align-items-center" style="font-family: Inter ,Lato, Arial, sans-serif;">
+    <!-- Spinner Event On Document Ready -->
     <div class="row shadow" style="min-width: 780px;">
         <div class="col-6 p-5 " style="background-color: #fcfcfc;  ">
             <form method="POST" action="Login.php">
@@ -93,7 +104,7 @@ if (isset($_POST['login_btn'])) {
                         </label>
                     </div>
                     <div class="w-50 text-md-right" style="margin-left: 73px; font-size: 14px;">
-                        <a href="#" style="color: grey;">Login as Admin?</a>
+                        <a href="login-admin.php" style="color: grey;">Login as Admin?</a>
                     </div>
                 </div>
                 <!-- <button type="button mx-5" class="btn btn-primary "
@@ -111,17 +122,7 @@ if (isset($_POST['login_btn'])) {
                 <a href="register.php" style="color: white;"> Sign Up </a> </button>
         </div>
     </div>
+
 </body>
 
 </html>
-
-<style>
-    body {
-        background-size: 800px;
-        background: #fff;
-        background-image: url('bg.png');
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('bg.png');
-        }
-
-    
-</style>
