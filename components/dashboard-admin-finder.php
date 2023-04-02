@@ -1,4 +1,4 @@
-<form class="" action="<?= $_SERVER['PHP_SELF']; ?>" method="get">
+<form class="card px-4 py-2" action="<?= $_SERVER['PHP_SELF']; ?>" method="get">
     <div class="row">
         <div class="col-12 col-lg-2 my-2">
             <select name="page" class="form-select form-select-sm">

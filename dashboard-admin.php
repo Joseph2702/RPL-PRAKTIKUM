@@ -145,7 +145,7 @@ include('client/dashboard-admin-client.php');
                                                                 <a class="dropdown-item" href="#">Edit</a>
                                                             </li>
                                                             <li>
-                                                                <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                                <a class="dropdown-item text-danger" href="?">Remove</a>
                                                             </li>
                                                         </ul>
                                                     </div>
