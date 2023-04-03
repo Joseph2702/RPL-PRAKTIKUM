@@ -21,10 +21,10 @@
                 <div class="navbar-text" style="margin-top: 1px;">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Welcome</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php">About</a>
+                            <a class="nav-link" href="contact.php">About</a>
                         </li>
                     </ul>
                     
@@ -38,7 +38,7 @@
                 <div class="w-100">
                     <p class=" fs-6 fw-medium">Cari/Daftar Membership #dirumahaja</p>
                     <p class="fs-1 fw-bold">Ayo Gabung Menjadi Membership Itenas!</p>
-                    <a class="btn btn-primary mt-4" role="button" href="login.php">Login</a>
+                    <a class="btn btn-primary mt-4 " role="button" href="login.php" style="width: 200px;">Login</a>
                 </div>
                 <div class="flex-grow">
                     <img src="img/vector_1.png" class="w-100">
