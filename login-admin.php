@@ -11,9 +11,16 @@ include('client/login-admin-client.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin | Parkeer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+        body {
+            
+            background: #fff;
+            background-image: url('bg.png');
+            background-size: 600px;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('bg.png');
+        }
+    </style>
 </head>
 
 <body class="vh-100 d-flex justify-content-center align-items-center" style="font-family: Lato, Arial, sans-serif;">
@@ -23,16 +30,14 @@ include('client/login-admin-client.php');
                 <div class="mb-3">
                     <h3 class="mb-4 " style=" margin-bottom: 24px; ">Sign in</h3>
                     <label for="exampleInputEmail1" class="form-label" style="font-size: 14px ">Admin ID</label>
-                    <input type="text" name="id_admin" class="form-control  rounded-pill " id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
+                    <input type="text" name="id_admin" class="form-control  rounded-pill " id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label" style="font-size: 14px">PIN</label>
                     <input type="text" name="pin" class="form-control  rounded-pill " id="exampleInputPassword1 ">
                 </div>
                 <div class="mb-3">
-                    <input type="submit" class="site-btn  rounded-pill" id="login-btn" name="login_btn" value="Sign In"
-                        style="width: 290px; height: 40px; 
+                    <input type="submit" class="site-btn  rounded-pill" id="login-btn" name="login_btn" value="Sign In" style="width: 290px; height: 40px; 
                     background-color: #FD841F; border: none; font-size: 14px; ">
                 </div>
                 <div class="form-group d-md-flex">
@@ -42,7 +47,8 @@ include('client/login-admin-client.php');
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <div class="w-50 text-md-right" style="margin-left: 73px; font-size: 14px;">
+                    <div class="w-50 text-md-right" style="margin-left: 60px; font-size: 14px;">
+                        <a href="login.php" style="color: grey; ">Login as Member?</a>
                     </div>
                 </div>
             </form>
@@ -54,10 +60,3 @@ include('client/login-admin-client.php');
 </body>
 
 </html>
-
-<style>
-    body {
-        background-image: url('bg.png');
-        background-size: 800px;
-    }
-</style>

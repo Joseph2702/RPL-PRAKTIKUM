@@ -63,7 +63,15 @@ if (isset($_POST['login_btn'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-
+    <style>
+        body {
+            
+            background: #fff;
+            background-image: url('bg.png');
+            background-size: 600px;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('bg.png');
+        }
+    </style>
 </head>
 
 <body class="vh-100 d-flex justify-content-center align-items-center" style="font-family: Lato, Arial, sans-serif;">
@@ -91,7 +99,7 @@ if (isset($_POST['login_btn'])) {
                         </label>
                     </div>
                     <div class="w-50 text-md-right" style="margin-left: 73px; font-size: 14px;">
-                        <a href="loginAdmin.php" style="color: grey;">Login as Admin?</a>
+                        <a href="login-admin.php" style="color: grey;">Login as Admin?</a>
                     </div>
                 </div>
                 <!-- <button type="button mx-5" class="btn btn-primary "
@@ -104,9 +112,9 @@ if (isset($_POST['login_btn'])) {
         <div class="col-6  d-flex flex-column justify-content-center" style="background-color: #FD841F;">
             <h3 class="text-center" style="font-weight: bold; color: white; ">Welcome to Login</h3>
             <p class="text-center fs-7" style="color: white; margin-top: 6px; font-size: 15px; ">Dont have Account?</p>
-            <button type="button mx-5" class="btn btn-primary rounded-pill bg-transparent"  style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 70px; 
+            <button type="button mx-5" class="btn btn-primary rounded-pill bg-transparent" style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 70px; 
             margin-left: 152px; border-color: white;">
-               <a href="register.php" style="color: white;"> Sign Up </a> </button>
+                <a href="register.php" style="color: white;"> Sign Up </a> </button>
         </div>
     </div>
 </body>
