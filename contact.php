@@ -10,12 +10,39 @@
     <link rel="stylesheet" href="css/our.css">
 </head>
 
-<body class="our-body-about-and-contact">
+<body class="our-body-index-and-contact">
+    <div class="d-flex flex-column vh-100">
+        <nav class="navbar">
+            <div class="container my-3">
+                <a class="navbar-brand" href="#">
+                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30"
+                        height="24" class="d-inline-block align-text-top">
+                </a>
+                <div class="navbar-text">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.php">Welcome</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.php">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container d-flex flex-grow-1">
+            <div class="d-flex justify-content-center align-self-center w-100 align-items-center flex-column">
+                <h5>Anggota Kelompok</h5>
+                <p>162021004 Ramzi Mubarak</p>
+                <p>162021005 Lazuardi Ananta Sakti</p>
+                <p>162021008 Sabrina Aziza Utami</p>
+                <p>162021009 Addien M Fadillah Mahdinur</p>
+                <p>162021011 Joseph Frinando Aritonang</p>
+                <p>162019017 Muhammad Aditya Rachman</p>
 
-    <div class="container">
-        <div class="d-flex s">
-
+            </div>
         </div>
+    </div>
     </div>
 
 </body>
