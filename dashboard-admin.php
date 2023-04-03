@@ -25,7 +25,7 @@ include('client/dashboard-admin-client.php');
     <nav class="navbar">
         <div class="container-fluid row px-5 py-5">
             <div class="col col-lg-6 d-flex justify-content-start">
-                <img src="img/logo.png" alt="Parkeer Logo" width="70px">
+                <img src="img/logo-dashboard.png" alt="Parkeer Logo" width="70px">
             </div>
             <div class="col col-lg-6 d-flex justify-content-end">
 

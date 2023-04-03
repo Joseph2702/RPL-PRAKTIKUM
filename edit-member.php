@@ -34,7 +34,7 @@ include('client/edit-member-client.php');
     <nav class="navbar sticky-top">
         <div class="container-fluid row g-5 px-5 mx-5 py-5">
             <div class="col col-lg-2">
-                <img src="img/logo.png" alt="" width="100px">
+                <img src="img/logo-dashboard.png" alt="" width="75px">
             </div>
             <!-- <div class="col col-lg-2 d-flex justify-content-end">
             </div> -->

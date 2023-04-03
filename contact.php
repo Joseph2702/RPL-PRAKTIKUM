@@ -11,7 +11,7 @@
 </head>
 
 <body class="our-body-index-and-contact">
-    <div class="d-flex flex-column vh-100">
+    <div class="d-flex flex-column vh-100" style="margin-top: 0.1px;">
         <nav class="navbar">
             <div class="container my-3">
                 <a class="navbar-brand" href="index.php">
