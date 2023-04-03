@@ -152,7 +152,10 @@ if (isset($_GET['logout'])) {
                                     <h4 class="text-muted mb-1">
                                         <?php echo $_SESSION['no_ktm'] ?>
                                     </h4> <br>
-                                    <a href="edit-member.php?no_ktm=<?php echo $_SESSION['no_ktm']; ?>">Edit</a>
+                                    <button type="button" class="btn btn-secondary">
+                                        <a style="color : white"
+                                            href="edit-member.php?no_ktm=<?php echo $_SESSION['no_ktm']; ?> ">Edit</a>
+                                    </button>
                                 </div>
                             </div>
                         </div>

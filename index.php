@@ -15,10 +15,10 @@
         <nav class="navbar">
             <div class="container my-3">
                 <a class="navbar-brand" href="#">
-                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30"
-                        height="24" class="d-inline-block align-text-top">
+                    <img src="img/logo.png" alt="Logo" width="60"
+                        height="60" class="d-inline-block align-text-top">
                 </a>
-                <div class="navbar-text">
+                <div class="navbar-text" style="margin-top: 1px;">
                     <ul class="nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.php">Welcome</a>
@@ -27,13 +27,16 @@
                             <a class="nav-link" href="contact.php">Contact</a>
                         </li>
                     </ul>
+                    
                 </div>
+                
             </div>
+            <hr style="width: 100%; color: white; border-top: 3px solid black; margin-top: 0.5px;">
         </nav>
         <div class="container d-flex flex-grow-1">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="w-100">
-                    <p class=" fs-6 fw-medium">Cari/daftar membership #dirumahaja</p>
+                    <p class=" fs-6 fw-medium">Cari/Daftar Membership #dirumahaja</p>
                     <p class="fs-1 fw-bold">Ayo Gabung Menjadi Membership Itenas!</p>
                     <a class="btn btn-primary mt-4" role="button" href="login.php">Login</a>
                 </div>
