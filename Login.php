@@ -62,10 +62,11 @@ if (isset($_POST['login_btn'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <style>
         body {
-            
+
             background: #fff;
             background-image: url('bg.png');
             background-size: 600px;
@@ -81,14 +82,16 @@ if (isset($_POST['login_btn'])) {
                 <div class="mb-3">
                     <h3 class="mb-4 " style=" margin-bottom: 24px; ">Sign in</h3>
                     <label for="exampleInputEmail1" class="form-label" style="font-size: 14px ">NO.KTM</label>
-                    <input type="text" name="no_ktm" class="form-control  rounded-pill " id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" name="no_ktm" class="form-control  rounded-pill " id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label" style="font-size: 14px">NO.PLAT</label>
                     <input type="text" name="no_plat" class="form-control  rounded-pill " id="exampleInputPassword1 ">
                 </div>
                 <div class="mb-3">
-                    <input type="submit" class="site-btn  rounded-pill" id="login-btn" name="login_btn" value="Sign In" style="width: 290px; height: 40px; 
+                    <input type="submit" class="site-btn  rounded-pill" id="login-btn" name="login_btn" value="Sign In"
+                        style="width: 290px; height: 40px; 
                     background-color: #FD841F; border: none; font-size: 14px; ">
                 </div>
                 <div class="form-group d-md-flex">
