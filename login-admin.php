@@ -34,7 +34,7 @@ include('client/login-admin-client.php');
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label" style="font-size: 14px">PIN</label>
-                    <input type="text" name="pin" class="form-control  rounded-pill " id="exampleInputPassword1 ">
+                    <input type="password" name="pin" class="form-control  rounded-pill " id="exampleInputPassword1 ">
                 </div>
                 <div class="mb-3">
                     <input type="submit" class="site-btn  rounded-pill" id="login-btn" name="login_btn" value="Sign In" style="width: 290px; height: 40px; 

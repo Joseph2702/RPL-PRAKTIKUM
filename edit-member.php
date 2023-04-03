@@ -86,7 +86,10 @@ include('client/edit-member-client.php');
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                        <input type="text" name="jenis_kendaraan" class="form-control  rounded-pill " id="exampleJenisKendaraan ">
+                                        <select name="jenis_kendaraan" class="rounded-pill" style="width: 100%; padding: 5px;">
+                                            <option value="Mobil">Mobil</option>
+                                            <option value="Motor">Motor</option>
+                                        </select>
                                     </p>
                                 </div>
                             </div>

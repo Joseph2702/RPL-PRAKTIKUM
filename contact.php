@@ -14,9 +14,9 @@
     <div class="d-flex flex-column vh-100">
         <nav class="navbar">
             <div class="container my-3">
-                <a class="navbar-brand" href="#">
-                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30"
-                        height="24" class="d-inline-block align-text-top">
+                <a class="navbar-brand" href="index.php">
+                    <img src="img/logo.png" alt="Logo" width="60"
+                        height="60" class="d-inline-block align-text-top">
                 </a>
                 <div class="navbar-text">
                     <ul class="nav">
@@ -24,12 +24,13 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Welcome</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php">About</a>
+                            <a class="nav-link" href="about.php" style="margin-left: 40px;">About</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <hr style="width: 100%; color: white; border-top: 3px solid black; margin-top: 0.5px;">
         <div class="container d-flex flex-grow-1">
             <div class="d-flex justify-content-center align-self-center w-100 align-items-center flex-column">
                 <h5>Anggota Kelompok</h5>

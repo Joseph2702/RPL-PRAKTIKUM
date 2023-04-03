@@ -14,7 +14,7 @@
     <div class="d-flex flex-column vh-100">
         <nav class="navbar">
             <div class="container my-3">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.php">
                     <img src="img/logo.png" alt="Logo" width="60"
                         height="60" class="d-inline-block align-text-top">
                 </a>
@@ -24,8 +24,7 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.php">About</a>
-                            <a class="nav-link" href="contact.php">Contact</a>
+                            <a class="nav-link" href="contact.php" style="margin-left: 40px;">Contact</a>
                         </li>
                     </ul>
                     
