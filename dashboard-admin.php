@@ -134,21 +134,9 @@ include('client/dashboard-admin-client.php');
                                                     </p>
                                                 </td>
                                                 <td class="align-middle">
-                                                    <div class="dropdown">
-                                                        <a class="btn btn-sm btn-outline-primary dropdown-toggle" href="#"
-                                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Action
-                                                        </a>
-
-                                                        <ul class="dropdown-menu">
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">Edit</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item text-danger" href="?">Remove</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                                    <a class="btn btn-outline-primary"
+                                                        href="edit-member.php?no_ktm=<?= $row['no_ktm'] ?>"
+                                                        role="button">Edit</a>
                                                 </td>
                                             </tr>
                                         <?php } ?>
