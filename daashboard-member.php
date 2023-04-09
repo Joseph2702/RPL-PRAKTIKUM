@@ -60,7 +60,7 @@ if (isset($_GET['logout'])) {
     <nav class="navbar sticky-top">
         <div class="container-fluid row g-5 px-5 mx-5 py-5">
             <div class="col col-lg-2">
-                <img src="img/logo.png" alt="" width="70px">
+                <img src="img/logo-dashboard.png" alt="" width="70px">
             </div>
             <div class="col col-lg-2 d-flex justify-content-end">
                 <div class="btn-group">
@@ -153,8 +153,7 @@ if (isset($_GET['logout'])) {
                                         <?php echo $_SESSION['no_ktm'] ?>
                                     </h4> <br>
                                     <button type="button" class="btn btn-secondary">
-                                        <a style="color : white"
-                                            href="edit-member.php?no_ktm=<?php echo $_SESSION['no_ktm']; ?> ">Edit</a>
+                                        <a style="color : white" href="edit-member.php ">Edit</a>
                                     </button>
                                 </div>
                             </div>

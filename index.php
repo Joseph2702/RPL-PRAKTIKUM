@@ -11,20 +11,20 @@
 </head>
 
 <body class="our-body-index-and-contact">
-    <div class="d-flex flex-column vh-100">
-        <nav class="navbar">
-            <div class="container my-3">
-                <a class="navbar-brand" href="#">
+    <div class="d-flex flex-column vh-100" style="margin-top: 0.1px;">
+        <nav class="navbar ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.php">
                     <img src="img/logo.png" alt="Logo" width="60"
                         height="60" class="d-inline-block align-text-top">
                 </a>
                 <div class="navbar-text" style="margin-top: 1px;">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Welcome</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.php">Contact</a>
+                            <a class="nav-link" href="contact.php" style="margin-left: 40px;">Contact</a>
                         </li>
                     </ul>
                     
@@ -38,7 +38,7 @@
                 <div class="w-100">
                     <p class=" fs-6 fw-medium">Cari/Daftar Membership #dirumahaja</p>
                     <p class="fs-1 fw-bold">Ayo Gabung Menjadi Membership Itenas!</p>
-                    <a class="btn btn-primary mt-4" role="button" href="login.php">Login</a>
+                    <a class="btn btn-primary mt-4 " role="button" href="login.php" style="width: 200px;">Login</a>
                 </div>
                 <div class="flex-grow">
                     <img src="img/vector_1.png" class="w-100">

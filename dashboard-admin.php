@@ -25,7 +25,7 @@ include('client/dashboard-admin-client.php');
     <nav class="navbar">
         <div class="container-fluid row px-5 py-5">
             <div class="col col-lg-6 d-flex justify-content-start">
-                <img src="img/logo.png" alt="Parkeer Logo" width="70px">
+                <img src="img/logo-dashboard.png" alt="Parkeer Logo" width="70px">
             </div>
             <div class="col col-lg-6 d-flex justify-content-end">
 
@@ -141,7 +141,8 @@ include('client/dashboard-admin-client.php');
                                                         </a>
                                                         <ul class="dropdown-menu">
                                                             <li>
-                                                                <a class="dropdown-item" href="#">Edit</a>
+                                                                <a class="dropdown-item"
+                                                                    href="edit-member.php?no_ktm=<?= $row['no_ktm'] ?>">Edit</a>
                                                             </li>
                                                             <li>
                                                                 <a class="dropdown-item text-danger"

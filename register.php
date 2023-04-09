@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+        body {
+
+            background: #fff;
+            background-image: url('bg.png');
+            background-size: 600px;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('bg.png');
+        }
+    </style>
+
 </head>
 
 <body class="vh-100 d-flex justify-content-center align-items-center">
@@ -40,16 +50,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label " style="font-size: 14px ">Jenis Kendaraan</label><br>
-                    <select name="jenis_kendaraan" class="rounded-pill" style="width: 350px; padding: 5px;">
+                    <select name="jenis_kendaraan" class="rounded-pill" style="width: 100%; padding: 5px;">
                         <option value="Mobil">Mobil</option>
                         <option value="Motor">Motor</option>
                     </select>
                 </div>
 
-                <!-- <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div> -->
+              
                 <button type="button mx-5" class="btn btn-primary rounded-pill" style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; 
                 width: 350px;  height: 40px; background-color: #FD841F; border: none; font-size: 14px; color: black; margin-top: 10px;">
                     Sign In
@@ -64,15 +71,3 @@
 </body>
 
 </html>
-
-<style>
-    body {
-        
-        background: #fff;
-        background-image: url('bg.png');
-        background-size: 600px;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('bg.png');
-    }
-
-    
-</style>
