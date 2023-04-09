@@ -73,8 +73,8 @@ include('client/dashboard-admin-client.php');
 
                         <div class="card">
                             <!-- Table -->
-                            <div class="table-responsive my-2">
-                                <table class="table table-hover table-striped">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped mb-0">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -89,6 +89,11 @@ include('client/dashboard-admin-client.php');
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php if ($countResult2 == 0) { ?>
+                                            <tr>
+                                                <td colspan="9" class="text-center">No data found.</td>
+                                            </tr>
+                                        <?php } ?>
                                         <?php $i = 0;
                                         while ($row = mysqli_fetch_assoc($result2)) {
                                             $i++; ?>
@@ -157,7 +162,7 @@ include('client/dashboard-admin-client.php');
                                 </table>
                             </div>
 
-                            <div class="card-footer">
+                            <div class="card-footer border-top-0">
                                 <small class="text-body-tertiary">&copy; 2023 Parkeer.</small>
                             </div>
                         </div>

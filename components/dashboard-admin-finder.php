@@ -8,6 +8,11 @@
                       } ?>>Halaman <?= $i; ?>
                     </option>
                 <?php endfor; ?>
+                <?php if ($countResult2 == 0) { ?>
+                    <option value="1">Halaman 1
+                    </option>
+                <?php } ?>
+
             </select>
         </div>
         <div class="col-12 col-lg-2 my-2">
