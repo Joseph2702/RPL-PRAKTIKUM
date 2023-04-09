@@ -49,7 +49,7 @@ include('client/dashboard-admin-client.php');
     <!-- Sidebar -->
     <div class="container-fluid">
         <div class="row px-5">
-            <div class="col col-lg-2">
+            <div class="col col-lg-2 mt-4">
                 <div class="list-group sticky-top pt-4" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-membership-list"
                         data-bs-toggle="list" href="#list-membership" role="tab"
