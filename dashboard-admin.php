@@ -139,13 +139,13 @@ include('client/dashboard-admin-client.php');
                                                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                             Action
                                                         </a>
-
                                                         <ul class="dropdown-menu">
                                                             <li>
                                                                 <a class="dropdown-item" href="#">Edit</a>
                                                             </li>
                                                             <li>
-                                                                <a class="dropdown-item text-danger" href="?">Remove</a>
+                                                                <a class="dropdown-item text-danger"
+                                                                    href="?remove=<?= $row['id_membership'] ?>">Remove</a>
                                                             </li>
                                                         </ul>
                                                     </div>
