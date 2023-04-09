@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/our.css">
+    <style>
+        .col {
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 
 <body class="our-body-index-and-contact">
@@ -29,7 +34,6 @@
                     </ul>
                     
                 </div>
-                
             </div>
             <hr style="width: 100%; color: white; border-top: 3px solid black; margin-top: 0.5px;">
         </nav>
@@ -38,13 +42,83 @@
                 <div class="w-100">
                     <p class=" fs-6 fw-medium">Cari/Daftar Membership #dirumahaja</p>
                     <p class="fs-1 fw-bold">Ayo Gabung Menjadi Membership Itenas!</p>
-                    <a class="btn btn-primary mt-4 " role="button" href="login.php" style="width: 200px;">Login</a>
+                    <a class="btn btn-primary mt-4  " role="button" href="login.php" style="width: 200px;">Login</a>
                 </div>
                 <div class="flex-grow">
                     <img src="img/vector_1.png" class="w-100">
                 </div>
             </div>
         </div>
+    </div>
+
+        <div class="container text-center">
+            <div class="row" style="margin-top: 30px;">
+            <div class="col d-flex justify-content-center">
+                    <div class="card " style="width: 28rem;">
+                        <img src="img/adin.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">162021004 Ramzi Mubarak</p>
+                            <a href="#" class="btn btn-primary">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card " style="width: 28rem;">
+                        <img src="img/adin.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">162021005 Lazuardi Ananta Sakti</p>
+                            <a href="#" class="btn btn-primary">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center" >
+                    <div class="card" style="width: 28rem;">
+                        <img src="img/adin.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">162021008 Sabrina Aziza Utami</p>
+                            <a href="#" class="btn btn-primary">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <div class="card " style="width: 28rem;">
+                        <img src="img/adin.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">162021009 Addien M Fadillah Mahdinur</p>
+                            <a href="#" class="btn btn-primary">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card " style="width: 28rem;">
+                        <img src="img/jo.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">162021011 Joseph Frinando Aritonang</p>
+                            <a href="#" class="btn btn-primary">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card " style="width: 28rem;">
+                        <img src="img/adit.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">162019017 Muhammad Aditya Rachman</p>
+                            <a href="#" class="btn btn-primary">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 
