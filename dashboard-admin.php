@@ -169,10 +169,9 @@ include('client/dashboard-admin-client.php');
                     </div>
                     <!-- Profile Content -->
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <div class="card">
+                        <div class="card mt-4">
                             <div class="card-body">
-                                <img style="border-radius: 100%;" src="img/" alt="">
-                                <h5 class="card-title">Haii!! Mr/Mrs.
+                                <h5 class="card-title">
                                     <?= $result1['nama_admin'] ?>
                                 </h5>
                             </div>
