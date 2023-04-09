@@ -12,8 +12,8 @@
 
 <body class="our-body-index-and-contact">
     <div class="d-flex flex-column vh-100" style="margin-top: 0.1px;">
-        <nav class="navbar">
-            <div class="container my-3">
+        <nav class="navbar ">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">
                     <img src="img/logo.png" alt="Logo" width="60"
                         height="60" class="d-inline-block align-text-top">

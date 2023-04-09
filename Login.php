@@ -75,9 +75,9 @@ if (isset($_POST['login_btn'])) {
     </style>
 </head>
 
-<body class="vh-100 d-flex justify-content-center align-items-center" style="font-family: Lato, Arial, sans-serif;">
+<body class="vh-100 d-flex justify-content-center align-items-center" style="font-family: Lato, Arial, sans-serif; ">
     <div class="row shadow" style="min-width: 780px;">
-        <div class="col-6 p-5 " style="background-color: #fcfcfc;  ">
+        <div class="col-6 p-5 " style="background-color: #fcfcfc;">
             <form method="POST" action="Login.php">
                 <div class="mb-3">
                     <h3 class="mb-4 " style=" margin-bottom: 24px; ">Sign in</h3>
