@@ -118,6 +118,9 @@ if (isset($_POST['login_btn'])) {
             <button type="button mx-5" class="btn btn-primary rounded-pill bg-transparent" style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 70px; 
             margin-left: 152px; border-color: white;">
                 <a href="register.php" style="color: white;"> Sign Up </a> </button>
+                <div class="w-50 text-md-right" style="margin-left: 73px; font-size: 14px; margin-top: 40px">
+                        <a href="login-admin.php" style="color: grey;">Login as Admin?</a>
+                    </div>
         </div>
     </div>
 </body>

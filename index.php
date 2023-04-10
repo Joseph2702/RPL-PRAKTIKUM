@@ -46,6 +46,7 @@
             </div>
         </div>
     </div>
+    <hr style="width: 100%; color: white; border-top: 3px solid black; margin-top: 0.5px;">
 
         <div class="container text-center">
             <div class="row" style="margin-top: 30px;">
