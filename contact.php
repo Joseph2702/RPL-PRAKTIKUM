@@ -23,6 +23,9 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="about.php" style="margin-left: 40px;">About</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="contact.php" style="margin-left: 40px;">Contact</a>
                         </li>
                     </ul>
