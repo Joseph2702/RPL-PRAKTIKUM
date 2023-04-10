@@ -33,7 +33,9 @@
             </div>
             <hr style="width: 100%; color: white; border-top: 3px solid black; margin-top: 0.5px;">
         </nav>
+        
         <div class="container text-center">
+        <h1 style="font-size: 80px; margin-top: 10px; margin-bottom: 40px;">Contact Us</h1>
             <div class="row" style="margin-top: 30px;">
                 <div class="col our-col d-flex justify-content-center">
                     <div class="card " style="width: 28rem;">

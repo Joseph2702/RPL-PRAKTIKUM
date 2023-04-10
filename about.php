@@ -36,7 +36,7 @@
         <div class="container d-flex flex-grow-1 justify-content-between align-items-center">
             <div class="w-100">
                 <h1 style="font-size: 80px;">Parkeer Itenas!</h1>
-                <p class="fs-3 fw-bold w-100" >Studi kasus yang dipilih adalah membuat program PHP untuk mengelola sistem keanggotaan parkiran kampus.
+                <p class="fs-3 fw-bold w-100" align="justify">Studi kasus yang dipilih adalah membuat program PHP untuk mengelola sistem keanggotaan parkiran kampus.
                     Program ini akan berisi aktivitas-aktivitas di 2 aktor yang terlibat, yaitu admin dan member(mahasiswa). Mahasiswa akan
                     mendaftarkan dirinya sebagai membership di kampus Itenas, kemudian data-data yang dimasukkan oleh mahasiswa akan
                     ditampilkan di dashboard Admin. Admin mempunyai action yang berbeda dibandingkan dengan membership, yaitu Admin mengedit,

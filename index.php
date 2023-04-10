@@ -53,14 +53,14 @@
     <div class="container d-flex flex-grow-1 justify-content-between align-items-center" style="margin-top: 100px;" >
             <div class="w-100">
                 <h1 style="font-size: 80px;">Parkeer Itenas!</h1>
-                <p class="fs-4 fw-bold w-100">Studi kasus yang dipilih adalah membuat program PHP untuk mengelola sistem keanggotaan parkiran kampus.
+                <p class="fs-4 fw-bold w-100"  align="justify">Studi kasus yang dipilih adalah membuat program PHP untuk mengelola sistem keanggotaan parkiran kampus.
                     Program ini akan berisi aktivitas-aktivitas di 2 aktor yang terlibat, yaitu admin dan member(mahasiswa). Mahasiswa akan
                     mendaftarkan dirinya sebagai membership di kampus Itenas, kemudian data-data yang dimasukkan oleh mahasiswa akan
                     ditampilkan di dashboard Admin. Admin mempunyai action yang berbeda dibandingkan dengan membership, yaitu Admin mengedit,
                     menghapus,mengubah,dan mencari data diri membership.</p>
             </div>
             <div class="flex-grow">
-                <img src="img/logo.png">
+                <img src="img/logo.png" >
             </div>
         </div>
 
@@ -85,17 +85,17 @@
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162021005 Lazuardi Ananta Sakti</p>
-                            <a href="#" class="btn btn-primary">Instagram</a>
+                            <a href="https://www.instagram.com/laju._jalan/"  target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
                 <div class="col our-col d-flex justify-content-center" >
                     <div class="card" style="width: 28rem;">
-                        <img src="img/sabrina.jpg" class="card-img-top object-fit-cover " target="_blank" style="height: 350px;">
+                        <img src="img/sabrina.jpg" class="card-img-top object-fit-cover "  style="height: 350px;">
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162021008 Sabrina Aziza Utami</p>
-                            <a href="#" class="btn btn-primary">Instagram</a>
+                            <a href="https://instagram.com/sabrinazizau" target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162019017 Muhammad Aditya Rachman</p>
-                            <a href="#"  target="_blank" class="btn btn-primary">Instagram</a>
+                            <a href="https://instagram.com/adeteyah?igshid=YmMyMTA2M2Y="  target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
