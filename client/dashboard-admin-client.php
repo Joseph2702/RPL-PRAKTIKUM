@@ -26,7 +26,7 @@ if (isset($_GET['remove'])) {
     $removeTarget = $_GET['remove'];
     $query = "DELETE FROM $db2 WHERE id_membership = $removeTarget";
     $exec = mysqli_query($conn, $query);
-    header("Location: " . $_SERVER['PHP_SELF'] . "?searchData=&page=1&limitData=50");
+    header("Location: " . $_SERVER['PHP_SELF']);
 }
 
 if (isset($_GET['searchData']) || isset($_GET['sortBy']) || isset($_GET['filterVehicleBy']) || isset($_GET['page'])) {
@@ -80,6 +80,8 @@ if (isset($_GET['searchData']) || isset($_GET['sortBy']) || isset($_GET['filterV
 
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
+    } else {
+        $page = 1;
     }
 
     if (isset($_GET['limitData'])) {

@@ -12,8 +12,8 @@
 
 .our-body-admin {
     background: #fff;
-    background-image: url('../img/doodle3.jpg');
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('../img/doodle3.jpg');
+    background-image: url('../img/doodle2.jpg');
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.97) 100%), url('../img/doodle2.jpg');
 }
 
 .our-body-index-and-contact {

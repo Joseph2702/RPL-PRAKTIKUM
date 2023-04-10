@@ -49,7 +49,7 @@ include('client/dashboard-admin-client.php');
     <!-- Sidebar -->
     <div class="container-fluid">
         <div class="row px-5">
-            <div class="col col-lg-2">
+            <div class="col col-lg-2 mt-4">
                 <div class="list-group sticky-top pt-4" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-membership-list"
                         data-bs-toggle="list" href="#list-membership" role="tab"
@@ -73,8 +73,8 @@ include('client/dashboard-admin-client.php');
 
                         <div class="card">
                             <!-- Table -->
-                            <div class="table-responsive my-2">
-                                <table class="table table-hover table-striped">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped mb-0">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -89,6 +89,11 @@ include('client/dashboard-admin-client.php');
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php if ($countResult2 == 0) { ?>
+                                            <tr>
+                                                <td colspan="9" class="text-center">No data found.</td>
+                                            </tr>
+                                        <?php } ?>
                                         <?php $i = 0;
                                         while ($row = mysqli_fetch_assoc($result2)) {
                                             $i++; ?>
@@ -157,17 +162,16 @@ include('client/dashboard-admin-client.php');
                                 </table>
                             </div>
 
-                            <div class="card-footer">
+                            <div class="card-footer border-top-0">
                                 <small class="text-body-tertiary">&copy; 2023 Parkeer.</small>
                             </div>
                         </div>
                     </div>
                     <!-- Profile Content -->
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                        <div class="card">
+                        <div class="card mt-4">
                             <div class="card-body">
-                                <img style="border-radius: 100%;" src="img/" alt="">
-                                <h5 class="card-title">Haii!! Mr/Mrs.
+                                <h5 class="card-title">
                                     <?= $result1['nama_admin'] ?>
                                 </h5>
                             </div>
