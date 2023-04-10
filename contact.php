@@ -34,11 +34,11 @@
             <div class="row" style="margin-top: 30px;">
                 <div class="col our-col d-flex justify-content-center">
                     <div class="card " style="width: 28rem;">
-                        <img src="img/adin.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
+                        <img src="img/ramzi.png" class="card-img-top object-fit-cover " style="height: 350px;">
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162021004 Ramzi Mubarak</p>
-                            <a href="#" class="btn btn-primary">Instagram</a>
+                            <a href="https://instagram.com/ramzi_mubarak?igshid=ZDdkNTZiNTM=" target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
@@ -48,17 +48,17 @@
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162021005 Lazuardi Ananta Sakti</p>
-                            <a href="#" class="btn btn-primary">Instagram</a>
+                            <a href="#" target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
                 <div class="col our-col d-flex justify-content-center">
                     <div class="card" style="width: 28rem;">
-                        <img src="img/adin.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
+                        <img src="img/sabrina.jpg" class="card-img-top object-fit-cover " style="height: 350px;">
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162021008 Sabrina Aziza Utami</p>
-                            <a href="#" class="btn btn-primary">Instagram</a>
+                            <a href="#" target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162021009 Addien M Fadillah Mahdinur</p>
-                            <a href="#" class="btn btn-primary">Instagram</a>
+                            <a href="#" target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162021011 Joseph Frinando Aritonang</p>
-                            <a href="#" class="btn btn-primary">Instagram</a>
+                            <a href="https://instagram.com/josephfa__?igshid=ZDdkNTZiNTM=" target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162019017 Muhammad Aditya Rachman</p>
-                            <a href="#" class="btn btn-primary">Instagram</a>
+                            <a href="#" target="_blank" class="btn btn-primary">Instagram</a>
                         </div>
                     </div>
                 </div>
