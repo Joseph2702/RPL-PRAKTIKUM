@@ -61,7 +61,7 @@
                 </div>
                 <div class="col our-col d-flex justify-content-center">
                     <div class="card " style="width: 28rem;">
-                        <img src="img/adin.jpg" class="card-img-top object-fit-cover " target="_blank" style="height: 350px;">
+                        <img src="img/lazuardi.jpg" class="card-img-top object-fit-cover " target="_blank" style="height: 350px;">
                         <div class="card-body">
                             <h5 class="card-title">Profile</h5>
                             <p class="card-text">162021005 Lazuardi Ananta Sakti</p>
