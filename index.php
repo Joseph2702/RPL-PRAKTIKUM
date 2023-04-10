@@ -49,10 +49,26 @@
             </div>
         </div>
     </div>
-    <hr style="width: 100%; color: white; border-top: 3px solid black; margin-top: 0.5px;">
 
-        <div class="container text-center">
-            <div class="row" style="margin-top: 30px;">
+    <div class="container d-flex flex-grow-1 justify-content-between align-items-center" style="margin-top: 100px;" >
+            <div class="w-100">
+                <h1 style="font-size: 80px;">Parkeer Itenas!</h1>
+                <p class="fs-4 fw-bold w-100">Studi kasus yang dipilih adalah membuat program PHP untuk mengelola sistem keanggotaan parkiran kampus.
+                    Program ini akan berisi aktivitas-aktivitas di 2 aktor yang terlibat, yaitu admin dan member(mahasiswa). Mahasiswa akan
+                    mendaftarkan dirinya sebagai membership di kampus Itenas, kemudian data-data yang dimasukkan oleh mahasiswa akan
+                    ditampilkan di dashboard Admin. Admin mempunyai action yang berbeda dibandingkan dengan membership, yaitu Admin mengedit,
+                    menghapus,mengubah,dan mencari data diri membership.</p>
+            </div>
+            <div class="flex-grow">
+                <img src="img/logo.png">
+            </div>
+        </div>
+
+        
+        
+        <div class="container text-center mt-5" >
+        <h1 style="font-size: 80px; margin-top: 10px;">Contact Us</h1>
+            <div class="row" style="margin-top: 70px;">
             <div class="col our-col d-flex justify-content-center">
                     <div class="card " style="width: 28rem;">
                         <img src="img/ramzi.png" class="card-img-top object-fit-cover " style="height: 350px;">
